@@ -104,9 +104,9 @@ Resources:
             nvm use v12.7.0
 
             # Download latest code, unzip it into /home/ec2-user/app
-            sudo yum install -y git
-            git clone https://github.com/HafsaKamran/automatic-deployments.git
-            mv automatic-deployments/* app
+            wget https://github.com/HafsaKamran/automatic-deployments/archive/main.zip 
+            unzip main.zip
+            mv automatic-deployments-main app
 
             # Create log directory
             mkdir -p /home/ec2-user/app/logs
