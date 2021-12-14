@@ -104,15 +104,15 @@ Resources:
             nvm use v12.7.0
 
             # Download latest code, unzip it into /home/ec2-user/app
-            yum install -y git
+            sudo yum install -y git
             git clone https://github.com/HafsaKamran/automatic-deployments.git
-            mv automatic-deployments app
+            mv automatic-deployments/* app
 
             # Create log directory
             mkdir -p /home/ec2-user/app/logs
 
             # Run server
-            cd app/automatic-deployments
+            cd app
             npm install
             npm start
           EOF
